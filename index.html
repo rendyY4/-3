@@ -20,7 +20,7 @@
             align-items: center;
             justify-content: center;
             padding: 1rem;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
             position: relative;
         }
 
@@ -82,7 +82,7 @@
             position: relative;
             z-index: 1;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            height: 90vh; /* Make container taller */
+            height: 90vh;
         }
 
         .chat-container::before {
@@ -141,8 +141,9 @@
         }
 
         .chat-box {
-            height: calc(90vh - 130px); /* Adjust height based on container */
+            height: calc(90vh - 130px);
             overflow-y: auto;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
@@ -158,6 +159,7 @@
             position: relative;
             animation: fadeIn 0.3s ease-out;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            word-wrap: break-word; /* Prevent text overflow */
         }
 
         @keyframes fadeIn {
@@ -276,6 +278,7 @@
             letter-spacing: 0.5px;
             position: relative;
             overflow: hidden;
+            white-space: nowrap; /* Prevent button text wrapping */
         }
 
         button:hover {
