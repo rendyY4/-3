@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,9 +39,11 @@
                 transform: translateY(100vh) scale(0.5);
                 opacity: 0;
             }
+
             50% {
                 opacity: 0.8;
             }
+
             100% {
                 transform: translateY(-100px) scale(1.5);
                 opacity: 0;
@@ -54,7 +57,7 @@
             backdrop-filter: blur(10px);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
-                        0 0 30px rgba(255, 182, 193, 0.3);
+                0 0 30px rgba(255, 182, 193, 0.3);
             overflow: hidden;
             position: relative;
             z-index: 1;
@@ -68,10 +71,10 @@
             left: 0;
             right: 0;
             height: 100%;
-            background: linear-gradient(45deg, 
-                rgba(255, 192, 203, 0.1) 0%,
-                rgba(255, 255, 255, 0.1) 50%,
-                rgba(255, 192, 203, 0.1) 100%);
+            background: linear-gradient(45deg,
+                    rgba(255, 192, 203, 0.1) 0%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    rgba(255, 192, 203, 0.1) 100%);
             pointer-events: none;
         }
 
@@ -93,16 +96,21 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, 
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.2) 50%,
-                rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.2) 50%,
+                    rgba(255, 255, 255, 0) 100%);
             animation: shimmer 2s infinite;
         }
 
         @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         .chat-header h1 {
@@ -131,8 +139,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .user {
@@ -174,9 +189,17 @@
         }
 
         @keyframes pulse {
-            0% { transform: translateY(-50%) scale(1); }
-            50% { transform: translateY(-50%) scale(1.2); }
-            100% { transform: translateY(-50%) scale(1); }
+            0% {
+                transform: translateY(-50%) scale(1);
+            }
+
+            50% {
+                transform: translateY(-50%) scale(1.2);
+            }
+
+            100% {
+                transform: translateY(-50%) scale(1);
+            }
         }
 
         .input-container {
@@ -196,9 +219,9 @@
             right: 0;
             height: 1px;
             background: linear-gradient(to right,
-                rgba(255, 107, 107, 0) 0%,
-                rgba(255, 107, 107, 0.5) 50%,
-                rgba(255, 107, 107, 0) 100%);
+                    rgba(255, 107, 107, 0) 0%,
+                    rgba(255, 107, 107, 0.5) 50%,
+                    rgba(255, 107, 107, 0) 100%);
         }
 
         input {
@@ -249,17 +272,20 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(
-                rgba(255, 255, 255, 0.2),
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(rgba(255, 255, 255, 0.2),
+                    rgba(255, 255, 255, 0));
             transform: rotate(45deg);
             animation: buttonShine 3s infinite;
         }
 
         @keyframes buttonShine {
-            0% { transform: rotate(45deg) translateY(-100%); }
-            100% { transform: rotate(45deg) translateY(100%); }
+            0% {
+                transform: rotate(45deg) translateY(-100%);
+            }
+
+            100% {
+                transform: rotate(45deg) translateY(100%);
+            }
         }
 
         .sparkle {
@@ -272,8 +298,15 @@
         }
 
         @keyframes sparkleFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
         }
 
         @media (max-width: 480px) {
@@ -316,25 +349,24 @@
         }
     </style>
 </head>
+
 <body>
     <div class="sparkle"></div>
     <div class="sparkle"></div>
 
     <div class="chat-container">
         <div class="chat-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
             </svg>
             <h1>Love Chat</h1>
         </div>
         <div class="chat-box" id="chat-box"></div>
         <div class="input-container">
-            <input 
-                type="text" 
-                id="user-input" 
-                placeholder="Ketik pesan..." 
-                onkeypress="if(event.key === 'Enter') sendMessage()"
-            />
+            <input type="text" id="user-input" placeholder="Ketik pesan..."
+                onkeypress="if(event.key === 'Enter') sendMessage()" />
             <button onclick="sendMessage()">Kirim</button>
         </div>
     </div>
@@ -378,17 +410,17 @@
             const inputField = document.getElementById("user-input");
             const chatBox = document.getElementById("chat-box");
             const userText = inputField.value.trim();
-            
+
             if (userText === "") return;
-            
+
             const userDiv = document.createElement('div');
             userDiv.className = 'message user';
             userDiv.textContent = userText;
             chatBox.appendChild(userDiv);
-            
+
             inputField.value = "";
             chatBox.scrollTop = chatBox.scrollHeight;
-            
+
             setTimeout(() => {
                 const botDiv = document.createElement('div');
                 botDiv.className = 'message bot';
@@ -409,9 +441,15 @@
                 "siapa pacar yasmin": "rendy",
                 "siapa pacar rendy?": "yasmin",
                 "siapa pacar rendy": "yasmin",
-                "pacarnya siapa": "yasmin"
+                "pacarnya siapa": "yasmin",
+                "halo": "Halo, sayang! Gimana kabarmu hari ini?",
+                "apa kabar": "Aku baik, cintaku. Bagaimana denganmu?",
+                "siapa kamu": "Aku chatbot yang diciptakan dengan penuh cinta untuk menemanimu!",
+                "bye": "Sampai jumpa, peluk hangat untukmu!",
+                "terima kasih": "Sama-sama, sayang! Aku selalu ada untukmu!",
+                "nama kamu siapa": "Aku adalah chatbot kecil dengan hati yang besar, siap membantu kapanpun kau butuhkan!(rendy<3)"
             };
-            return responses[input.toLowerCase()] || "Maaf, saya tidak mengerti.";
+            return responses[input.toLowerCase()] || "Maaf, balasan belum ada sayangkuu<3";
         }
 
         // Create sparkles and floating hearts on load
@@ -428,4 +466,5 @@
         window.addEventListener('resize', createSparkles);
     </script>
 </body>
+
 </html>
